@@ -24,6 +24,13 @@
     padding-left: 40;
 }
 
+.active{
+    background-color:saddlebrown;
+    color: goldenrod;
+    width: 100%;
+    justify-self: center;
+}
+
 .footer{
     position: fixed;
     bottom: 0;
