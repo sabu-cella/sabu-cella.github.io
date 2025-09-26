@@ -16,7 +16,7 @@ body{
 
 .header{
     color: goldenrod;
-    background-color: #8b4513;
+    background-color: #663e13;
     font-family: Wonderworld; 
     float: left;
     width: 100%;
@@ -39,7 +39,7 @@ body{
 }
 
 .menu a.active{
-    background-color: saddlebrown;
+    background-color: #663e13;
     color: goldenrod;
 }
 
