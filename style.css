@@ -46,9 +46,9 @@ body{
 .title{
     font-family: Distropiax;
     text-align: center;
-    font-size: clamp(3px, 9vw, 100px);
+    font-size: clamp(24px, 7vw, 72px);
     color:peru;
-    padding: 100px;
+    padding: 80px 20px;
 }
 
 .footer{
