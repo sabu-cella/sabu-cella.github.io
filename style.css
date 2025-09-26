@@ -12,10 +12,10 @@ body{
 
 .menu{
     float: left;
-    text-align: center;
     background-color:sandybrown;
     display: flex;
     text-decoration: none;
+    overflow: hidden;
     
 }
 
@@ -23,6 +23,7 @@ body{
     list-style: none;
     font-size: 17px;
     padding: 14px 16px;
+    text-align: center;
 }
 
 .menu ul li{
