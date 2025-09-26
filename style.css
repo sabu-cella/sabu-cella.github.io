@@ -4,9 +4,8 @@ body{
 }
 
 .header{
-    padding: 1px 0px 0px 20px;
-    background-color:saddlebrown;
     h1{color: goldenrod};
+    background-image: url("/Immagini/heading_background.jpg");
 }
 
 .menu{
