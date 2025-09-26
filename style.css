@@ -11,7 +11,7 @@ body{
 }
 
 .menu{
-    float: left;
+
     background-color:sandybrown;
     display: flex;
     text-decoration: none;
@@ -19,17 +19,12 @@ body{
     
 }
 
-.menu ul{
+.menu a{
     list-style: none;
     font-size: 17px;
     padding: 14px 16px;
     text-align: center;
-}
-
-.menu ul li{
-    margin-top: 0;
-    padding-right: 40;
-    padding-left: 40;
+    float: left;
 }
 
 .active{
