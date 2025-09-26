@@ -3,6 +3,11 @@
     src: url("Font/Distropiax.otf");
 }
 
+@font-face{
+    font-family: Wonderworld;
+    src: url("Font/Wonderworld.otf");
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -10,29 +15,32 @@ body{
 }
 
 .header{
-    h1{color: goldenrod};
+    color: goldenrod;
     background-color: saddlebrown;
+    font-family: Wonderworld; 
+    float: left;
+    width: 100%;
+    text-indent: 30px;
 }
 
 .menu{
     background-color: burlywood;
     overflow: hidden;
-    font-family: Distropiax;
+    font-size: 21px;
 }
 
 .menu a{
     float: left;
     color: rgba(82, 48, 12, 0.998);
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 16px;
     text-decoration: none;
+    text-indent: 0px;
 }
 
 .menu a.active{
     background-color: saddlebrown;
     color: goldenrod;
-    font-size: 18px;
-    padding: 13px 16px;
 }
 
 .footer{
