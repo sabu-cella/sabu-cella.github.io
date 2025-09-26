@@ -1,16 +1,23 @@
+@font-face{
+    font-family: Distropiax;
+    src: url("/Font/Distropiax.otf");
+}
+
 body{
     margin: 0;
     padding: 0;
+    background-color: bisque;
 }
 
 .header{
     h1{color: goldenrod};
-    background-image: url("/Immagini/heading_background.jpg");
+    background-color: saddlebrown;
 }
 
 .menu{
     background-color: burlywood;
     overflow: hidden;
+    font-family: Distropiax;
 }
 
 .menu a{
