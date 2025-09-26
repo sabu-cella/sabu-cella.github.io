@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 .header{
     padding: 0;
     margin: 0;
@@ -6,16 +11,18 @@
 }
 
 .menu{
+    float: left;
+    text-align: center;
     background-color:sandybrown;
     display: flex;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
+    
 }
 
 .menu ul{
     list-style: none;
-    display: flex;
+    font-size: 17px;
+    padding: 14px 16px;
 }
 
 .menu ul li{
