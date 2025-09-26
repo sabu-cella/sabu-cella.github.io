@@ -16,7 +16,7 @@ body{
 
 .header{
     color: goldenrod;
-    background-color: saddlebrown;
+    background-color: #8b4513;
     font-family: Wonderworld; 
     float: left;
     width: 100%;
@@ -41,6 +41,14 @@ body{
 .menu a.active{
     background-color: saddlebrown;
     color: goldenrod;
+}
+
+.title{
+    text-align: center;
+    font-size: 90px;
+    font-family: Distropiax;
+    padding: 120px;
+    color:rgb(158, 99, 40);
 }
 
 .footer{
