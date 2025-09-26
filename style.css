@@ -20,22 +20,22 @@ body{
     font-family: Wonderworld; 
     float: left;
     width: 100%;
-    text-indent: 30px;
+    text-indent: 3%;
 }
 
 .menu{
     background-color: burlywood;
     overflow: hidden;
-    font-size: 21px;
+    font-size: 140%;
 }
 
 .menu a{
     float: left;
     color: #52300c;
     text-align: center;
-    padding: 12px 16px;
+    padding: 1.2% 1.6%;
     text-decoration: none;
-    text-indent: 0px;
+    text-indent: 0;
 }
 
 .menu a.active{
@@ -44,11 +44,11 @@ body{
 }
 
 .title{
-    text-align: center;
-    font-size: 90px;
     font-family: Distropiax;
-    padding: 120px;
-    color:rgb(158, 99, 40);
+    text-align: center;
+    font-size: clamp(30px, 9vw, 100px);
+    color:peru;
+    padding: 10%;
 }
 
 .footer{
