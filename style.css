@@ -51,6 +51,10 @@ body{
     color:rgb(158, 99, 40);
 }
 
+.title img{
+    size: 1000px;
+}
+
 .footer{
     position: fixed;
     bottom: 0;
