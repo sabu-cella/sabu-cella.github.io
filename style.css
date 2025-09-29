@@ -46,7 +46,7 @@ body{
 .title{
     font-family: Distropiax;
     text-align: center;
-    font-size: clamp(40px, 7vw, 72px);
+    font-size: clamp(72px, 7vw, 72px);
     color:peru;
     padding: 80px 20px;
 }
