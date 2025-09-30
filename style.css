@@ -11,7 +11,8 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 245, 232);
+    /*background-color: rgb(255, 245, 232);*/
+    background-color: black;
 }
 
 .header{
@@ -44,7 +45,6 @@ body{
 }
 
 .heading{
-    display: flex;
     justify-self: center;
     padding-top: 200px;
     font-family: Distropiax;
@@ -52,27 +52,24 @@ body{
     font-size: 100px;
     color:peru;
     position: absolute;
-    z-index: -900;
     scale: 130%;
     background-color: black;
 }
 
 .heading img{
-    position: relative;
+    position: absolute;
     width: 280px;
-    top: 100px;
 }
 
 .heading p{
-    position: relative;
-    top: -321px;
+    position: absolute;
     white-space: nowrap; /*Non va a capo*/
+    justify-self: center;
 }
 
 .heading pre{
-    position: relative;
+    position: absolute;
     background-color: rgb(255, 245, 232);
-    top: -120px;
     font-size: 50px;
 }
 
