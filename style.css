@@ -43,12 +43,18 @@ body{
     color: goldenrod;
 }
 
-.title{
+.heading{
     font-family: Distropiax;
     text-align: center;
-    font-size: clamp(24px, 7vw, 72px);
+    font-size: 100px;
     color:peru;
-    padding: 80px 20px;
+    position: absolute;
+    z-index: -900;
+}
+
+.heading img{
+    position: relative;
+    width: 100px;
 }
 
 .footer{
