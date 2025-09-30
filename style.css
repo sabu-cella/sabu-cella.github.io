@@ -44,6 +44,7 @@ body{
 }
 
 .heading{
+    display: flex;
     justify-self: center;
     padding-top: 200px;
     font-family: Distropiax;
@@ -53,6 +54,7 @@ body{
     position: absolute;
     z-index: -900;
     scale: 130%;
+    background-color: black;
 }
 
 .heading img{
@@ -84,3 +86,4 @@ body{
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
 }
+
