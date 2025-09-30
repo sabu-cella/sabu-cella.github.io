@@ -45,13 +45,14 @@ body{
 
 .heading{
     justify-self: center;
-    padding: 150px;
+    padding: 150px 20px;
     font-family: Distropiax;
     text-align: center;
     font-size: 100px;
     color:peru;
     position: absolute;
     z-index: -900;
+    scale: 120%;
 }
 
 .heading img{
