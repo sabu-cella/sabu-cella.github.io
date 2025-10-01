@@ -45,7 +45,7 @@ body{
 }
 
 .heading{
-    justify-self: center;
+    justify-content: center;
     padding-top: 200px;
     font-family: Distropiax;
     text-align: center;
