@@ -11,8 +11,8 @@
 body{
     margin: 0;
     padding: 0;
-    /*background-color: rgb(255, 245, 232);*/
-    background-color: black;
+    background-color: rgb(255, 245, 232);
+    overflow-x: hidden; /*Evita lo scroll laterale*/
 }
 
 .header{
@@ -28,6 +28,8 @@ body{
     background-color: burlywood;
     overflow: hidden;
     font-size: 140%;
+    position: sticky; /*Rimane attaccato al margine superiore della pagina quando lo raggiunge*/
+    width: 100% /*occupa tutta la larghezza della pagina*/
 }
 
 .menu a{
@@ -45,32 +47,47 @@ body{
 }
 
 .heading{
-    justify-self: center;
-    padding-top: 200px;
+    padding-top: 800px;
     font-family: Distropiax;
     text-align: center;
-    font-size: 100px;
+    font-size: 130px;
     color:peru;
-    position: absolute;
-    scale: 130%;
-    background-color: black;
+    position: relative;
+    transform: scale(clamp(0.7, calc(200vw / 1920px), 1.1));
+    transform-origin: center;
 }
 
 .heading img{
     position: absolute;
-    width: 280px;
+    width: 364px;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .heading p{
     position: absolute;
     white-space: nowrap; /*Non va a capo*/
     justify-self: center;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .heading pre{
     position: absolute;
     background-color: rgb(255, 245, 232);
     font-size: 50px;
+    justify-self: center;
+    margin: 0;
+    padding-bottom: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .footer{
