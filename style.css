@@ -49,9 +49,11 @@ hr{
     .menu a{
         color: #52300c;
         text-align: center;
-        padding: 12px 16px;
+        padding: 12px;
         text-decoration: none;
         text-indent: 0;
+        position: relative; /*Diventa punto di riferimanto delle righe nell'animazione di hover*/
+        transition: background-color 0.3s ease-out, color 0.3s ease-out;
     }
 
     .menu a.active{
@@ -59,6 +61,42 @@ hr{
         color: goldenrod;
     }
 
+    /* Animazione */
+    /*definizione stile righe*/
+    .menu a:not(.active)::before,
+    .menu a:not(.active)::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: goldenrod;
+        transition: width 0.3s ease-out, left 0.3s ease-out;
+    }
+
+    /*posizionamento righe*/
+    .menu a::before{
+        top: 0;
+    }
+
+    .menu a::after{
+        bottom: 0px;
+    }
+
+    /*animazione righe*/
+    .menu a:hover::before,
+    .menu a:hover::after{
+        width: 100%;
+        left: 0;
+        transition: width 0.3s ease-in, left 0.3s ease-in;
+    }
+
+    /*animazone link*/
+    .menu a:not(.active):hover{
+        background-color:#52300c;
+        color:burlywood;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    }
 
 .ptitle{
     font-family: Wonderworld;
@@ -68,7 +106,7 @@ hr{
 }
 
 .content{
-    font-size: 25px;
+    font-size: 22px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
