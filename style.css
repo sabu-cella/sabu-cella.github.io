@@ -116,7 +116,7 @@ hr{
 #Cos-e{
     margin-right: 600px;
     margin: 5vw;
-    min-width: clamp(300px, 85vw, 800px);
+    width: clamp(300px, 85vw, 800px);
 }
 
 .footer{
