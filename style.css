@@ -14,7 +14,6 @@ body{
     padding: 0;
     background-color: rgb(255, 245, 232);
     overflow-x: hidden; /*Evita lo scroll laterale*/
-    display: flexbox;
 }
 
 hr{
@@ -107,7 +106,7 @@ hr{
 }
 
 .content{
-    border-radius: 20px;
+    border-radius: clamp(15px, 5vw, 20px);
     background-color: rgb(255, 230, 207);
     padding: 1vw 2vw 2vw;
     margin: 4vw;
@@ -115,13 +114,25 @@ hr{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.withimage{
+    position: relative;
+    display: flex;
+    margin: 4vw 0;
+    gap: 2vw;
+    flex-wrap: wrap; /*va a capo quando non c'è spazio*/
+    img{
+        width: clamp(100px, 85vw, 400px);
+        border-radius: clamp(15px, 5vw, 20px);
+        /*margin: 4vw; <-- Aggiungilo in @media(max-width: ...;)*/
+    }
+}
+
 #Cos-e{
     width: clamp(300px, 85vw, 800px);
 }
 
 #Storia{
-    margin-left: auto; /*allinea a destra*/
-    width: clamp(300px, 85vw, 800px);
+    justify-content: end;
 }
 
 .footer{
