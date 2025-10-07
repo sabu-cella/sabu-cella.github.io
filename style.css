@@ -25,7 +25,7 @@ hr{
 
 img{
     width: clamp(100px, 85vw, 500px);
-    height: fixed;
+    height: auto;
     border-radius: clamp(15px, 5vw, 20px);
     margin: auto;
 }
@@ -126,8 +126,9 @@ img{
     position: relative;
     display: flex;
     margin: 4vw 0;
-    @media(max-width: 760px){
-        flex-wrap: wrap; /*va a capo quando non c'è spazio*/
+    @media(max-width: 1000px){
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -136,8 +137,8 @@ img{
     img{
         margin-left: 4vw;
         margin-right: 2vw;
-        @media(max-width: 760px){
-            margin: 4vw;
+        @media(max-width: 1000px){
+            margin: 4vw auto;
             order: 1;
         }
     }
@@ -164,7 +165,7 @@ img{
         position: relative; /*Diventa punto di riferimento per i div figli*/
         transform: scale(clamp(0.7, calc(200vw / 1920px), 1.1)); /*In base alla dimensione della pagina scala l'immagine*/
         transform-origin: center; /*Scala mantenendo il centro del div come punto di riferimento*/
-        @media(max-width: 760px){
+        @media(max-width: 1000px){
             transform: scale(85vw); /*In base alla dimensione della pagina scala l'immagine*/
             transform-origin: center; /*Scala mantenendo il centro del div come punto di riferimento*/
         }
