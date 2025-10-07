@@ -23,6 +23,13 @@ hr{
   border-top: 2px solid goldenrod;
 }
 
+img{
+    width: clamp(100px, 85vw, 500px);
+    height: fixed;
+    border-radius: clamp(15px, 5vw, 20px);
+    margin: auto;
+}
+
 .header{
     color: goldenrod;
     background-color: #663e13;
@@ -112,6 +119,7 @@ hr{
     margin: 4vw;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    width: clamp(300px, 85vw, 800px);
 }
 
 .withimage{
@@ -119,20 +127,20 @@ hr{
     display: flex;
     margin: 4vw 0;
     gap: 2vw;
-    flex-wrap: wrap; /*va a capo quando non c'è spazio*/
-    img{
-        width: clamp(100px, 85vw, 400px);
-        border-radius: clamp(15px, 5vw, 20px);
-        /*margin: 4vw; <-- Aggiungilo in @media(max-width: ...;)*/
+    @media(max-width: 760px){
+        flex-wrap: wrap; /*va a capo quando non c'è spazio*/
     }
-}
-
-#Cos-e{
-    width: clamp(300px, 85vw, 800px);
 }
 
 #Storia{
     justify-content: end;
+    img{
+        margin-left: 4vw;
+        @media(max-width: 760px){
+            margin: 4vw;
+            order: 1;
+        }
+    }
 }
 
 .footer{
@@ -190,7 +198,3 @@ hr{
         top: 50%;
         transform: translate(-50%, -50%);
     }
-
-
-
-
