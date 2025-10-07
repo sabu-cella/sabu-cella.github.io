@@ -8,13 +8,15 @@
     src: url("Font/Wonderworld.otf");
 }
 
+html{
+    overflow-x: hidden; /*Evita lo scroll laterale*/
+}
 
 body{
     margin: 0;
     padding: 0;
     margin-bottom: 8vw;
     background-color: rgb(255, 245, 232);
-    overflow-x: hidden; /*Evita lo scroll laterale*/
 }
 
 
@@ -216,3 +218,4 @@ img{
         top: 50%;
         transform: translate(-50%, -50%);
     }
+
