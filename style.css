@@ -285,7 +285,7 @@ td:not(#left){
 /* TITOLO INDEX */
 
     .title{
-        padding-top: 650px;
+        padding-top: clamp(400px, 70vw, 650px);
         font-family: Distropiax;
         font-size: 130px;
         color:peru;
@@ -323,7 +323,7 @@ td:not(#left){
     }
     @media(max-width: 1000px){
         .title p{
-            font-size: 110px;
+            top: calc(50% - 10px);
         }
     }
 
