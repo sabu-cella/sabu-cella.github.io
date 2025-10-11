@@ -321,11 +321,9 @@ td:not(#left){
         transform: translate(-50%, -50%);
         line-height: 0;
     }
-    @supports (-webkit-touch-callout: none) {
-        @media(max-width: 1000px){
-            .title p{
-                top: calc(50% - 22px);
-            }
+    @media(max-width: 769px){
+        .title p{
+            top: calc(50% - 22px);
         }
     }
 
