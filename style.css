@@ -9,11 +9,11 @@
 }
 
 html{
-    overflow-x: hidden; /*Evita lo scroll laterale*/
+    overflow-x: clip; /*Evita lo scroll laterale*/
 }
 
 body{
-    overflow-x: hidden;
+    overflow-x: clip;
     margin: 0;
     padding: 0;
     background-color: rgb(255, 245, 232);
@@ -166,6 +166,13 @@ td:not(#left){
         img{
             margin: 4vw auto;
         }
+    }
+}
+
+#SvsO{
+    justify-content: center;
+    img{
+        object-fit:cover;
     }
 }
 
