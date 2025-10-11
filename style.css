@@ -13,13 +13,15 @@ html{
 }
 
 body{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
-    margin-bottom: 8vw;
     background-color: rgb(255, 245, 232);
 }
 
-
+b{
+    color:rgb(185, 114, 43);
+}
 
 hr{
   width: 80%;
@@ -33,6 +35,19 @@ img{
     height: auto;
     border-radius: clamp(15px, 5vw, 20px);
     margin: auto;
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 3vw 0.5vw;
+}
+
+th{
+    color:rgb(185, 114, 43);
+}
+
+td:not(#left){
+    text-align: center;
 }
 
 .header{
@@ -154,6 +169,9 @@ img{
     }
 }
 
+#nota{
+    font-size: 16px;
+}
 
 /* Footer */
     .footer{
@@ -180,7 +198,7 @@ img{
     }
     @media(max-width: 1000px){
         .title{
-        transform: scale(85vw); /*In base alla dimensione della pagina scala l'immagine*/
+        transform: scale(clamp(0.6, calc(200vw / 1920px), 1)); /*In base alla dimensione della pagina scala l'immagine*/
         transform-origin: center; /*Scala mantenendo il centro del div come punto di riferimento*/
         }
     }
