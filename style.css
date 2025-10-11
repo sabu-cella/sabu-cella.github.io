@@ -290,8 +290,8 @@ td:not(#left){
     }
     @media(max-width: 1000px){
         .title{
-        transform: scale(clamp(0.6, calc(200vw / 1920px), 1)); /*In base alla dimensione della pagina scala l'immagine*/
-        transform-origin: center; /*Scala mantenendo il centro del div come punto di riferimento*/
+            transform: scale(clamp(0.6, calc(200vw / 1920px), 1)); /*In base alla dimensione della pagina scala l'immagine*/
+            transform-origin: center; /*Scala mantenendo il centro del div come punto di riferimento*/
         }
     }
 
@@ -319,10 +319,9 @@ td:not(#left){
     .title pre{
         position: absolute;
         background-color: rgb(255, 245, 232);
-        font-size: 50px;
+        font-size: 72px;
         justify-self: center;
         margin: 0;
-        padding-bottom: 25px;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
