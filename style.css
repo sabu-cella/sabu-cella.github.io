@@ -50,6 +50,11 @@ table{
     border-collapse: separate;
     border-spacing: 3vw 0.5vw;
 }
+@media(max-width: 1000px){
+    table{
+        font-size: clamp(15px, 5vw, 20px);
+    }
+}
 
 th{
     color:rgb(185, 114, 43);
@@ -97,10 +102,30 @@ td:not(#left){
         color: goldenrod;
     }
 
-    /* Animazione */
+    /* Menu a tendina */
+    .dropdown{
+        display:flex;
+        position: relative;
+    }
+
+    .sottomenu{
+        display: none; /*invisibile di default*/
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        background-color: burlywood;
+        width: auto;
+        white-space: nowrap; /*impedisce al testo di andare a capo*/
+    }
+
+    .dropdown:hover .sottomenu { /*quando il cursore è su dropdown modifica sottomenu*/
+        display: flex;
+    }
+
+    /* Animazioni */
     /*definizione stile righe*/
-    .menu a:not(.active)::before,
-    .menu a:not(.active)::after{
+    .menu a:not(.no-anim)::before,
+    .menu a:not(.no-anim)::after{
         content: '';
         position: absolute;
         left: 50%;
@@ -121,18 +146,51 @@ td:not(#left){
 
     /*animazione righe*/
     .menu a:hover::before,
-    .menu a:hover::after{
+    .menu a:not(.no-anim):hover::after{
         width: 100%;
         left: 0;
         transition: width 0.3s ease-in, left 0.3s ease-in;
     }
 
     /*animazone link*/
-    .menu a:not(.active):hover{
+    .menu a:not(.no-anim):hover{
         background-color:#52300c;
         color:burlywood;
         transition: background-color 0.3s ease-in, color 0.3s ease-in;
     }
+
+
+    /*Animazione Armi*/
+    /*definizione stile riga*/
+    #Armi::before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color:#52300c;
+        transition: width 0.3s ease-out, left 0.3s ease-out;
+    }
+
+    /*posizionamento riga*/
+    #Armi::before{
+        top: 0;
+    }
+
+    /*animazione riga*/
+    #Armi:hover::before{
+        width: 100%;
+        left: 0;
+        transition: width 0.3s ease-in, left 0.3s ease-in;
+    }
+
+    /*animazone link*/
+    #Armi:hover{
+        color:#52300c;
+        background-color:burlywood;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    }
+
 
 .ptitle{
     font-family: Wonderworld;
