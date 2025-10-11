@@ -122,6 +122,11 @@ td:not(#left){
         display: flex;
     }
 
+    .dropdown:hover #Armi{
+        color:#52300c;
+        background-color:burlywood;
+    }
+
     /* Animazioni */
     /*definizione stile righe*/
     .menu a:not(.no-anim)::before,
@@ -315,6 +320,11 @@ td:not(#left){
         top: 50%;
         transform: translate(-50%, -50%);
         line-height: 0;
+    }
+    @media(max-width: 1000px){
+        .title p{
+            transform: translate(-50%, calc(-50% - 10px));
+        }
     }
 
     .title pre{
