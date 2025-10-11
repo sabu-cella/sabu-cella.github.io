@@ -150,15 +150,17 @@ td:not(#left){
 @media (max-width: 1000px){
     .withimage{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
+
 
 #Storia{
     justify-content: end;
     img{
         margin-left: 4vw;
         margin-right: 2vw;
+        order: 1;
     }
 }
 @media (max-width: 1000px){
@@ -169,10 +171,26 @@ td:not(#left){
     }
 }
 
+
 #SvsO{
     justify-content: center;
+    margin: 4vw;
+    align-items: center;
     img{
-        
+        width: 22vw;
+    }
+}
+@media (max-width: 1000px){
+    #SvsO{
+        margin: 0;
+        img{
+            width: 40vw;
+        }
+        #immagini{
+            margin: 4vw auto;
+            flex-direction: row;
+            order: 1;
+        }
     }
 }
 
