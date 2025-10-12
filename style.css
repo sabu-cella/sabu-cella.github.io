@@ -106,25 +106,30 @@ td:not(#left){
         color: goldenrod;
     }
 
-    /* Menu a tendina */
+    /* Menu a tendina + animazione*/
     .dropdown{
         display:flex;
         position: relative;
     }
 
     .sottomenu{
-        display: none; /*invisibile di default*/
+        display:flex;
         position: absolute;
+        height: 0%;
+        overflow: hidden;
         top: 100%;
-        flex-direction: column;
         background-color: burlywood;
         width: auto;
+        flex-direction: column;
         min-width: 100%;
         white-space: nowrap; /*impedisce al testo di andare a capo*/
+        transition: height 0.3s ease-in;
     }
 
     .dropdown:hover .sottomenu { /*quando il cursore è su dropdown modifica sottomenu*/
         display: flex;
+        height: 500%;
+        transition: height 0.3s ease-in;
     }
 
     .dropdown:hover #Armi{
@@ -235,23 +240,40 @@ td:not(#left){
         transition: background-color 0.3s ease-in, color 0.3s ease-in;
     }
 
-
     /*Animazioni mobile*/
     @media(max-width:769px){
-
-        /* Work in progress
         #Armi::before{
             display: none;
         }
-        .dropdown::before{
+
+        .dropdown{
+            flex-direction: column;
+        }
+
+        .sottomenu{
+            position: static;
+        }
+
+        .dropdown:hover .sottomenu{
+            height: 100%;
+        }
+        
+        /*Border dropdown (sottomenu)*/
+        .dropdown::after {
             content: '';
             position: absolute;
             left: 0;
-            width: 2px;
+            top: 0;
+            width: 3px;
             height: 0;
-            background-color:#52300c;
-            transition: height 0.3s ease-out, left 0.3s ease-out;
-        }*/
+            background-color: #52300c;
+            transition: height 0.3s ease-out;
+        }
+        
+        .dropdown:hover::after {
+            height: 100%;
+            transition: height 0.3s ease-in;
+        }
     }
 
 
