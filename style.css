@@ -166,7 +166,7 @@ td:not(#left){
 
         .menu.active{
             display: flex;
-            width: 50vw;
+            width: 60vw;
         }
     }
 
@@ -235,7 +235,7 @@ td:not(#left){
         transition: background-color 0.3s ease-in, color 0.3s ease-in;
     }
 
-    
+
     /*Animazioni mobile*/
     @media(max-width:769px){
 
