@@ -12,6 +12,11 @@ html{
     overflow-x: clip; /*Evita lo scroll laterale*/
     scroll-padding: 140px; /*Evita che il menu copra il titolo dei paragrafi quandosi usano gli anchor*/
 }
+@media(max-width: 769px){
+    html{
+        scroll-padding: 10px;
+    }
+}
 
 body{
     overflow-x: clip;
@@ -248,10 +253,20 @@ td:not(#left){
 
         .dropdown{
             flex-direction: column;
+            pointer-events: none;
+        }
+
+        #Armi{
+            pointer-events: auto;
         }
 
         .sottomenu{
             position: static;
+            pointer-events: auto;
+        }
+
+        .dropdown:hover{
+            pointer-events: auto;
         }
 
         .dropdown:hover .sottomenu{
