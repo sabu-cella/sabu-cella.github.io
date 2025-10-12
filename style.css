@@ -24,7 +24,7 @@ body{
 h2{
     font-family: Wonderworld;
     color: rgb(184, 124, 11);
-    font-size: 50px;
+    font-size: clamp(37px, 7vw, 50px);
     text-indent: 3vw;
     padding-top: 2vw;
     margin-bottom: -1vw;
@@ -67,13 +67,20 @@ td:not(#left){
     font-family: Wonderworld; 
     width: 100%;
     padding: 7px;
-    text-indent: 30px;
+    text-indent: 15px;
+    display: flex;
+    font-size: clamp(12px, 3vw, 16px);
+    align-items: center;
 }
 
+#burger{
+    display: none;
+}
 
 /* MENU */
 
     .menu{
+        user-select: none;
         display: flex;
         font-family: Wonderworld; 
         background-color: burlywood;
@@ -112,6 +119,7 @@ td:not(#left){
         flex-direction: column;
         background-color: burlywood;
         width: auto;
+        min-width: 100%;
         white-space: nowrap; /*impedisce al testo di andare a capo*/
     }
 
@@ -122,6 +130,44 @@ td:not(#left){
     .dropdown:hover #Armi{
         color:#52300c;
         background-color:burlywood;
+    }
+
+    /*Menu mobile*/
+    @media(max-width: 769px){
+        .header{
+            height: 50px;
+            gap: 15px;
+            text-indent: 5px;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu{
+            flex-direction: column;
+            width: 0;
+            display: none;
+            left: 0;
+            position: fixed;
+            height: 100%;
+        }
+
+        .menu a{
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box; /*Include il padding nella larghezza*/
+        }
+
+        #burger{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            width: 32px;
+        }
+
+        .menu.active{
+            display: flex;
+            width: 50vw;
+        }
     }
 
     /* Animazioni */
@@ -172,11 +218,7 @@ td:not(#left){
         height: 2px;
         background-color:#52300c;
         transition: width 0.3s ease-out, left 0.3s ease-out;
-    }
-
-    /*posizionamento riga*/
-    #Armi::before{
-        top: 0;
+        top: 0; /*posizionamento riga*/
     }
 
     /*animazione riga*/
@@ -191,6 +233,25 @@ td:not(#left){
         color:#52300c;
         background-color:burlywood;
         transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    }
+
+    
+    /*Animazioni mobile*/
+    @media(max-width:769px){
+
+        /* Work in progress
+        #Armi::before{
+            display: none;
+        }
+        .dropdown::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 2px;
+            height: 0;
+            background-color:#52300c;
+            transition: height 0.3s ease-out, left 0.3s ease-out;
+        }*/
     }
 
 
@@ -354,4 +415,3 @@ td:not(#left){
         top: 50%;
         transform: translate(-50%, -50%);
     }
-
