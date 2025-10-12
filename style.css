@@ -227,20 +227,17 @@ td:not(#left){
     }
 }
 
-
-#Storia{
+.left-img{
     justify-content: end;
-    img{
-        margin-left: 4vw;
-        margin-right: 2vw;
-        order: 1;
-    }
 }
+.left-img img{
+    margin-left: 4vw;
+    margin-right: 2vw;
+    order: 1;
+    }
 @media (max-width: 1000px){
-    #Storia{
-        img{
-            margin: 4vw auto;
-        }
+    .left-img img{
+        margin: 4vw auto;
     }
 }
 
