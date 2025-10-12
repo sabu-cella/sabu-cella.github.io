@@ -10,6 +10,7 @@
 
 html{
     overflow-x: clip; /*Evita lo scroll laterale*/
+    scroll-padding: 60px; /*Evita che il menu copra il titolo dei paragrafi quandosi usano gli anchor*/
 }
 
 body{
