@@ -155,10 +155,11 @@ td:not(#left){
         .menu{
             flex-direction: column;
             width: 0;
-            display: none;
+            overflow-x: hidden;
             left: 0;
             position: fixed;
             height: 100%;
+            transition: width 0.3s ease-out;
         }
 
         .menu a{
@@ -177,6 +178,7 @@ td:not(#left){
         .menu.active{
             display: flex;
             width: 60vw;
+            transition: width 0.3s ease-out;
         }
     }
 
@@ -232,7 +234,7 @@ td:not(#left){
     }
 
     /*animazione riga*/
-    #Armi:hover::before{
+    .dropdown:hover #Armi::before{
         width: 100%;
         left: 0;
         transition: width 0.3s ease-in, left 0.3s ease-in;
