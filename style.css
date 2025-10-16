@@ -212,6 +212,8 @@ td:not(#left){
     }
 
     /* Animazioni */
+
+    /*Animazioni menu*/
     /*definizione stile righe*/
     .menu a:not(.no-anim)::before,
     .menu a:not(.no-anim)::after{
