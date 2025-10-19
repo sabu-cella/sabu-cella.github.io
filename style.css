@@ -91,7 +91,6 @@ td:not(#left){
     transform: translate(0, 4%);
     transform-origin: center;
     text-shadow: none;
-    transition: text-shadow 0.3s ease-out;
     transition: text-shadow 0.3s ease-out, transform 0.3s ease-out;
 }
 
@@ -348,6 +347,7 @@ td:not(#left){
     margin: 4vw 0;
 }
 .withimage img{
+    left: 4vw;
     order: 1;
 }
 @media (max-width: 1000px){
