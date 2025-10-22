@@ -126,6 +126,11 @@ button:active{
     transition: text-shadow 0.3s ease-out, transform 0.3s ease-out;
 }
 
+a{
+    color:#52300c;
+    text-decoration: none;
+}
+
 /* MENU */
 
     .menu{
@@ -410,6 +415,13 @@ button:active{
     }
 }
 
+.ack{
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+}
 
 #cos-e{
     justify-self: center;
