@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Immagini/logo.png">
+    <link rel="icon" href="Immagini/icona.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Situs duellatorum - Armi</title>
@@ -30,21 +30,26 @@
                 <a href="Armi.html#striscia">Striscia</a>
             </div>
         </div>
-        <a href="Scrivici.html" class="active no-anim">Scrivici</a>
+        <a class="active no-anim">Contatti</a>
     </div>
 
-    <form class="content">
+    <form class="content" action="https://formspree.io/f/xjkaqodd" method="post">
+        <div class="ptitle">Scrivici</div>
         <label>Mittente </label>
-        <input type="text" id="name"><br>
+        <input type="text" name="name" id="name"><br>
         <br>
-        <label>e-mail </label>
-        <input type="text" id="e-mail"><br>
+        <label>E-mail </label>
+        <input type="text" name="e-mail" id="e-mail"><br>
         <br>
-        <label><b>Messaggio</b></label><br>
-        <input type="text" id="msg"><br>
+        <label>Messaggio</label><br>
+        <textarea name="messaggio" rows="5" cols="40" required></textarea>
+
+        <input type="hidden" name="_next" value="https://sabu-cella.github.io/Inviato.html">
+
+        <button type="submit">Invia</button>
     </form>
 
-    <div class="footer">
+    <div class="footer" style="position: fixed">
         <p>© 2025 Situs duellatorum, sabu-cella</p>
     </div>
 

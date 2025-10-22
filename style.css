@@ -67,6 +67,38 @@ td:not(#left){
     text-align: center;
 }
 
+form{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    font-size: clamp(12px, 3vw, 16px);
+    border: solid 2px burlywood;
+    border-radius: 4px;
+    padding: 5px 4px;
+    white-space: wrap;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: burlywood;
+    font-family: wonderworld;
+    font-size: clamp(16px, 3vw, 20px);
+    margin: 30px 15px 10px;
+    padding: 10px;
+    align-self: end;
+    color:#52300c;
+    border: solid 2px peachpuff;
+    border-radius: 4px;
+}
+
+button:active{
+    background-color: peachpuff;
+    border: solid 2px burlywood;
+}
+
 .header{
     color: rgb(218, 165, 32);
     background-color: #663e13;
@@ -97,6 +129,7 @@ td:not(#left){
 /* MENU */
 
     .menu{
+        position: relative;
         user-select: none;
         display: flex;
         font-family: Wonderworld; 
@@ -286,6 +319,8 @@ td:not(#left){
         .dropdown{
             flex-direction: column;
             pointer-events: none;
+            height: 50px;
+            transition: height 0.3s ease;
         }
 
         #Armi{
@@ -299,6 +334,8 @@ td:not(#left){
 
         .dropdown:hover{
             pointer-events: auto;
+            height: 250px;
+            transition: height 0.3s ease;
         }
 
         .dropdown:hover .sottomenu{
@@ -419,7 +456,7 @@ td:not(#left){
 
 /* Footer */
     .footer{
-        padding: 20px 0;
+        padding: 5px 0;
         bottom: 0;
         background-color:rgb(26, 26, 26);
         color:white;
