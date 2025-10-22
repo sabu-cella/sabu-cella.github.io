@@ -478,6 +478,12 @@ a{
         font-size: clamp(11px, 2vw, 16px)
     }
 
+    @media(max-width: 769px){
+        .dinam-foot{
+            position: fixed;
+        }
+    }
+
 
 /* TITOLO INDEX */
 
