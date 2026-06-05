@@ -80,6 +80,7 @@ input, textarea{
     padding: 5px 4px;
     white-space: wrap;
     font-family:Arial, Helvetica, sans-serif;
+    resize: none;
 }
 
 button{
@@ -539,4 +540,14 @@ a{
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+    }
+
+
+/* INVIATO */
+    #sent{
+        display:hidden;
+    }
+
+    #sent.active{
+        display:flex;
     }
