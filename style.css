@@ -544,10 +544,6 @@ a{
 
 
 /* INVIATO */
-    #sent{
-        display:hidden;
-    }
-
-    #sent.active{
-        display:flex;
+    .hidden{
+        display:none;
     }
