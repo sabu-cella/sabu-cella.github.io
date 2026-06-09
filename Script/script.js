@@ -42,9 +42,43 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     //Messaggio inviato
+    input1 = false;
+    input2 = false;
+    input3 = false;
+
+    document.getElementById("mitt").addEventListener('input', function(e) {
+        if(e.target.checkValidity()){
+            input1 = true;
+        } else {
+            input1 = false;
+        }
+    });
+
+    document.getElementById("email").addEventListener('input', function(e) {
+        if(e.target.checkValidity()){
+            input2 = true;
+        } else {
+            input2 = false;
+        }
+    });
+
+    document.getElementById("messag").addEventListener('input', function(e) {
+        if(e.target.checkValidity()){
+            input3 = true;
+        } else {
+            input3 = false;
+        }
+    });
+
     document.getElementById('invia').addEventListener('click', function(){
-        document.getElementById('form').classList.toggle('hidden');
-        document.getElementById('fatto').classList.toggle('hidden');
+        if(input1 === true && input2 === true && input3 === true){
+            document.getElementById('form').classList.toggle('hidden');
+            document.getElementById('fatto').classList.toggle('hidden');
+            document.getElementById('form').reset();
+            input1 = false;
+            input2 = false;
+            input3 = false;
+        }
     });
 
     document.getElementById('continua').addEventListener('click', function(){
