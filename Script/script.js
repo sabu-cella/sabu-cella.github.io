@@ -13,12 +13,17 @@ document.addEventListener('DOMContentLoaded', function(){
     });
     prev.addEventListener('click', () => {
         i--;
-        if(i < 0){i = immagini.length -1;}
+        if(i < 0){i = immagini.length - 1;}
         showslide(i);
     });
+    for(let j = 0; j < dots.length; j++){
+        dots[j].addEventListener('click', function(){
+            showslide(i = j);
+        });
+    }
     
     function showslide(i){
-        for(var j = 0; j < immagini.length; j++){
+        for(let j = 0; j < immagini.length; j++){
             immagini[j].classList.add('hidden');
             dots[j].classList.remove('active');
         }
