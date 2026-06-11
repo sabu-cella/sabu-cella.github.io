@@ -9,10 +9,18 @@
     <title>Situs duellatorum - Immagini</title>
 </head>
 <body>
-    <div class="content">
-        <div class="withimage">
-            <img src="Immagini/sciabola.jpg">
-        </div>
+    <img id="prev" src="Immagini/arrow-left.png" style="width: 64px; background-color:black; margin-right: 368px">
+    <img id="next" src="Immagini/arrow-right.png" style="width: 64px; background-color:black;">
+    <div>
+        <img src="Immagini/carosello1.png" class="slides">
+        <img src="Immagini/carosello2.jpg" class="slides hidden">
+        <img src="Immagini/spada.png" class="slides hidden">
+    </div>
+    <div style="display:flex; color:grey; font-size: 200px;">
+        <div class="dot active">.</div>
+        <div class="dot">.</div>
+        <div class="dot">.</div>
     </div>
 </body>
+<script src="Script/script.js"></script>
 </html>

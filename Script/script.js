@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', function(){
+    //Carosello
+    const immagini = document.getElementsByClassName('slides');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+    const dots = document.getElementsByClassName('dot');
+    var i = 0
+    console.log(immagini);
+    next.addEventListener('click', () => {
+        i++;
+        if(i > immagini.length - 1){i = 0;}
+        showslide(i);
+    });
+    prev.addEventListener('click', () => {
+        i--;
+        if(i < 0){i = immagini.length -1;}
+        showslide(i);
+    });
+    
+    function showslide(i){
+        for(var j = 0; j < immagini.length; j++){
+            immagini[j].classList.add('hidden');
+            dots[j].classList.remove('active');
+        }
+        immagini[i].classList.remove('hidden');
+        dots[i].classList.add('active');
+    }
+
+
     // Apre il menu media
     document.getElementById('burger').addEventListener('click', function() {
         document.querySelector('.menu').classList.toggle('active');
@@ -85,5 +113,7 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('form').classList.toggle('hidden');
         document.getElementById('fatto').classList.toggle('hidden');
     });
+
+
 });
 
