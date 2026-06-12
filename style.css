@@ -52,6 +52,8 @@ img{
     height: auto;
     border-radius: clamp(15px, 5vw, 20px);
     margin: auto;
+    margin-top: 0;
+    user-select: none;
 }
 
 table{
@@ -384,6 +386,13 @@ a{
     width: clamp(300px, 85vw, 800px);
 }
 
+.slides{
+    .content{
+        margin-top: 0;
+        margin-bottom: 2.6vw;
+    }
+}
+
 .withimage{
     position: relative;
     display: flex;
@@ -549,11 +558,25 @@ a{
     }
 
 /* CAROSELLO */
-    .slideshow img{
-        width: 100%;
-        border-radius: 0;
+    .dot-line{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+
+    .dot{
+        color: burlywood;
+        user-select: none;
+        transition: color 0.1s ease-in;
+        padding-right: 1vw;
+        font-size: 2.1vw;
+    }
+
+    .dot:hover{
+        color: rgb(184, 124, 11);
+        transition: color 0.1s ease-in;
     }
 
     .dot.active{
-        color: rgb(158, 186, 214);
+        color: #663e13;
     }
