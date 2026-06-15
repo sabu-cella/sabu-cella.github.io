@@ -394,13 +394,20 @@ a{
 }
 
 .withimage{
+    justify-content: center;
     position: relative;
     display: flex;
-    margin: 4vw 0;
+    align-items: center;
+    margin: 3vw 0 3vw 0;
+    .content{
+        margin: 0;
+    }
 }
 .withimage img{
-    left: 4vw;
     order: 1;
+    margin: 0;
+    margin-left: 3vw;
+    padding: 0;
 }
 @media (max-width: 1000px){
     .withimage{
@@ -410,12 +417,11 @@ a{
 }
 
 .left-img{
-    justify-content: end;
     align-items: center;
 }
 .left-img img{
     margin-left: 4vw;
-    margin-right: 2vw;
+    margin-right: 3vw;
     order: 0;
     }
 @media (max-width: 1000px){
