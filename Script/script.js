@@ -1,34 +1,47 @@
 document.addEventListener('DOMContentLoaded', function(){
     //Carosello
-    const immagini = document.getElementsByClassName('slides');
-    const next = document.getElementById('next');
-    const prev = document.getElementById('prev');
-    const dots = document.getElementsByClassName('dot');
-    var i = 0
-    console.log(immagini);
-    next.addEventListener('click', () => {
-        i++;
-        if(i > immagini.length - 1){i = 0;}
-        showslide(i);
-    });
-    prev.addEventListener('click', () => {
-        i--;
-        if(i < 0){i = immagini.length - 1;}
-        showslide(i);
-    });
-    for(let j = 0; j < dots.length; j++){
-        dots[j].addEventListener('click', function(){
-            showslide(i = j);
-        });
-    }
-    
-    function showslide(i){
-        for(let j = 0; j < immagini.length; j++){
-            immagini[j].classList.add('hidden');
-            dots[j].classList.remove('active');
+    if(document.querySelector('#armi') != null){
+        const immagini = document.getElementsByClassName('slides');
+        const next = document.getElementById('next');
+        const prev = document.getElementById('prev');
+        const dots = document.getElementsByClassName('dot');
+        const url = window.location.href;
+        const tendina = document.getElementsByClassName('tendina')
+        var hash = url.split('#').pop();
+        var anchors = ['due-mani', 'lato', 'sciabola', 'striscia'];
+        var i = 0
+
+        for(let j = 0; j < hash.length - 1; j++){
+            if(hash === anchors[j]){showSlide(i = anchors.indexOf(hash));}
         }
-        immagini[i].classList.remove('hidden');
-        dots[i].classList.add('active');
+
+        next.addEventListener('click', () => {
+            i++;
+            if(i > immagini.length - 1){i = 0;}
+            showSlide(i);
+        });
+        prev.addEventListener('click', () => {
+            i--;
+            if(i < 0){i = immagini.length - 1;}
+            showSlide(i);
+        });
+        for(let j = 0; j < dots.length; j++){
+            tendina[j].addEventListener('click', function(){
+                showSlide(i = j);
+            });
+            dots[j].addEventListener('click', function(){
+                showSlide(i = j);
+            });
+        }
+
+        function showSlide(i){
+            for(let j = 0; j < immagini.length; j++){
+                immagini[j].classList.add('hidden');
+                dots[j].classList.remove('active');
+            }
+            immagini[i].classList.remove('hidden');
+            dots[i].classList.add('active');
+        }
     }
 
 
@@ -75,50 +88,49 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     //Messaggio inviato
-    input1 = false;
-    input2 = false;
-    input3 = false;
+    if(document.querySelector('#contatti') != null){
+        input1 = false;
+        input2 = false;
+        input3 = false;
 
-    document.getElementById("mitt").addEventListener('input', function(e) {
-        if(e.target.checkValidity()){
-            input1 = true;
-        } else {
-            input1 = false;
-        }
-    });
+        document.getElementById("mitt").addEventListener('input', function(e) {
+            if(e.target.checkValidity()){
+                input1 = true;
+            } else {
+                input1 = false;
+            }
+        });
 
-    document.getElementById("email").addEventListener('input', function(e) {
-        if(e.target.checkValidity()){
-            input2 = true;
-        } else {
-            input2 = false;
-        }
-    });
+        document.getElementById("email").addEventListener('input', function(e) {
+            if(e.target.checkValidity()){
+                input2 = true;
+            } else {
+                input2 = false;
+            }
+        });
 
-    document.getElementById("messag").addEventListener('input', function(e) {
-        if(e.target.checkValidity()){
-            input3 = true;
-        } else {
-            input3 = false;
-        }
-    });
+        document.getElementById("messag").addEventListener('input', function(e) {
+            if(e.target.checkValidity()){
+                input3 = true;
+            } else {
+                input3 = false;
+            }
+        });
 
-    document.getElementById('invia').addEventListener('click', function(){
-        if(input1 === true && input2 === true && input3 === true){
+        document.getElementById('invia').addEventListener('click', function(){
+            if(input1 === true && input2 === true && input3 === true){
+                document.getElementById('form').classList.toggle('hidden');
+                document.getElementById('fatto').classList.toggle('hidden');
+                document.getElementById('form').reset();
+                input1 = false;
+                input2 = false;
+                input3 = false;
+            }
+        });
+
+        document.getElementById('continua').addEventListener('click', function(){
             document.getElementById('form').classList.toggle('hidden');
             document.getElementById('fatto').classList.toggle('hidden');
-            document.getElementById('form').reset();
-            input1 = false;
-            input2 = false;
-            input3 = false;
-        }
-    });
-
-    document.getElementById('continua').addEventListener('click', function(){
-        document.getElementById('form').classList.toggle('hidden');
-        document.getElementById('fatto').classList.toggle('hidden');
-    });
-
-
+        });
+    }
 });
-

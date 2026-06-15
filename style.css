@@ -558,18 +558,26 @@ a{
     }
 
 /* CAROSELLO */
+
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        font-size: 35px;
+        justify-content: center;
+    }
+
     .dot-line{
         display: flex;
         flex-direction: row;
-        align-content: center;
+        align-items: center;
     }
 
     .dot{
         color: burlywood;
         user-select: none;
         transition: color 0.1s ease-in;
-        padding-right: 1vw;
-        font-size: 2.1vw;
+        padding-right: clamp(10px, 1vw, 1vw);
+        font-size: clamp(22px, 2.1vw, 2.1vw);
     }
 
     .dot:hover{
